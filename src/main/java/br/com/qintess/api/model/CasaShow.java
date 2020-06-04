@@ -30,10 +30,10 @@ public class CasaShow {
 	
 	private int capacidade;
 	
-	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "usuario_id")
-	private Usuario usuario;
+//	
+//	@ManyToOne(fetch = FetchType.EAGER)
+//	@JoinColumn(name = "usuario_id")
+//	private Usuario usuario;
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "casaShow")
@@ -87,13 +87,13 @@ public class CasaShow {
 		this.capacidade = capacidade;
 	}
 
-	public Usuario getUsuario() {
-		return usuario;
-	}
-
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
+//	public Usuario getUsuario() {
+//		return usuario;
+//	}
+//
+//	public void setUsuario(Usuario usuario) {
+//		this.usuario = usuario;
+//	}
 
 	
 
@@ -128,6 +128,12 @@ public class CasaShow {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "CasaShow [id=" + id + ", nome=" + nome + ", endereco=" + endereco + ", capacidade=" + capacidade
+				+ ", eventos=" + eventos + "]";
 	}
 
 

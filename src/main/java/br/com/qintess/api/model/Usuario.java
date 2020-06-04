@@ -46,9 +46,9 @@ public class Usuario {
 	
 
 	
-	@JsonIgnore
-	@OneToMany(mappedBy = "usuario")
-	private List<CasaShow> casaShow;
+//	@JsonIgnore
+//	@OneToMany(mappedBy = "usuario")
+//	private List<CasaShow> casaShow;
 	
 	
 	

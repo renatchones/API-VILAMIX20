@@ -1,4 +1,4 @@
-package br.com.qintess.api.model;
+	package br.com.qintess.api.model;
 
 
 import java.time.LocalDate;
@@ -164,14 +164,7 @@ public class Evento {
 		this.preco = preco;
 	}
 
-	public CasaShow getCasashow() {
-		return casaShow;
-	}
-
-	public void setCasashow(CasaShow casaShow) {
-		this.casaShow = casaShow;
-	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

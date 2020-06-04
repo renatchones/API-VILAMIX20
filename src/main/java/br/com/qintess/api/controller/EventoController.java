@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +25,7 @@ import br.com.qintess.api.service.ItemPedidoService;
 
 @RestController
 @RequestMapping("/")
+@CrossOrigin("http://localhost:4200")
 public class EventoController {
 	
 	@Autowired
@@ -58,9 +60,9 @@ public class EventoController {
 
 	@PutMapping("/eventos/{id}")
 	public void EditarEvento(@PathVariable("id") Long id, @RequestBody Evento evento){
-
-		Optional<Evento> Evento = repo.findById(id);
+		System.out.println(evento.getCasaShow().getId());
 		evento.setId(id);
+		System.out.println(evento);
 		repo.save(evento);
 
 	}
